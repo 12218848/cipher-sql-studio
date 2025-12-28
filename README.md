@@ -34,6 +34,27 @@ This project was developed as part of a **Full-Stack Developer Recruitment Assig
 
 
 ---
+## 🔄 Architecture & Data Flow
+
+1. User selects an assignment and writes a SQL query in the frontend
+2. React frontend sends the query to the Express backend via REST API
+3. Backend validates and executes the query on PostgreSQL
+4. Query results or errors are returned to the frontend
+5. For hints, the backend sends contextual prompts to the OpenAI API
+6. LLM returns guidance without revealing the final solution
+
+## ⚙️ Setup & Installation
+
+### Prerequisites
+- Node.js (v18+)
+- PostgreSQL
+- npm
+
+### Backend
+```bash
+cd backend
+npm install
+node server.js
 
 
 
